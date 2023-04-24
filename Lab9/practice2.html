@@ -1,0 +1,38 @@
+<html>
+<head>
+    <style>
+    #paragraph { border-style: solid;
+                border-width: 10;}
+    </style>
+    <h1>Lab 7 Practice 2</h2>
+</head>
+<body>
+    <script>
+    function alert_paragraph_color() {
+        var border_R = document.getElementById("border_R").value;
+        var border_G = document.getElementById("border_G").value;
+        var border_B = document.getElementById("border_B").value;
+        var border_width = document.getElementById("border_width").value;
+        var bg_R = document.getElementById("bg_R").value;
+        var bg_G = document.getElementById("bg_G").value;
+        var bg_B = document.getElementById("bg_B").value;
+
+        var tag = document.getElementById("paragraph");
+        tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
+        tag.style.borderWidth = border_width
+        tag.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`;
+    }
+    </script>
+
+    <div id="paragraph">Change my background AND my border</div>
+
+    Border R(0-255): <input type="text" id="border_R" value=""> <br>
+    Border G(0-255): <input type="text" id="border_G" value=""> <br>
+    Border B(0-255): <input type="text" id="border_B" value=""> <br>
+    Border Width: <input type="text" id="border_width" value=""> <br>
+    Background R(0-255): <input type="text" id="bg_R" value=""> <br>
+    Background G(0-255): <input type="text" id="bg_G" value=""> <br>
+    Background B(0-255): <input type="text" id="bg_B" value=""> <br>
+    <button onclick="alert_paragraph_color()">Make Changes</button> <br>
+</body>
+</html>
